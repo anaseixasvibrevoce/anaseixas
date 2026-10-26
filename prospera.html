@@ -733,10 +733,10 @@ section:has(+ .depoimentos){ padding-bottom:56px; }
 .depoimentos .section-head h2 .cifrao{ color:var(--green); }
 .depoimentos .section-head p{ margin-top:18px; }
 
-.dep-wall{ columns:3; column-gap:24px; }
+.dep-wall{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px; align-items:start; }
 .dep-card{
   display:block;
-  margin:0 0 24px;
+  margin:0;
   padding:34px 30px 28px;
   background:var(--paper);
   border:1px solid var(--sand);
@@ -791,11 +791,11 @@ section:has(+ .depoimentos){ padding-bottom:56px; }
 .dep-who small{ font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-soft); }
 .dep-who .cifrao{ color:var(--green); }
 
-@media (max-width: 980px){ .dep-wall{ columns:2; } }
+@media (max-width: 980px){ .dep-wall{ grid-template-columns:repeat(2,1fr); } }
 @media (max-width: 640px){
   .depoimentos{ padding:32px 0 88px; }
   section:has(+ .depoimentos){ padding-bottom:48px; }
-  .dep-wall{ columns:1; }
+  .dep-wall{ grid-template-columns:1fr; }
   .dep-card{ padding:30px 24px 24px; }
 }
 
@@ -1047,32 +1047,6 @@ section:has(+ .depoimentos){ padding-bottom:56px; }
         <figure class="dep-card reveal is-long">
           <span class="dep-mark" aria-hidden="true">&ldquo;</span>
           <blockquote class="dep-text">
-          <p>Nossaa.. foi muito bom!</p>
-          <p>Contextualização: eu tinha muita dúvida em como pensar no trauma.</p>
-          <p>Pq assim.. é muito desconfortável, e na minha versão eu sou a vítima (sempre 😅) e isso me incomodava um pouco.. me fazia pensar se eu estava certa em pensar assim. E inúmeros desvaneios sobre esse tema! Ahaha</p>
-          <p>E entender que o trauma explica, mas não justifica, foi maravilhoso.</p>
-          <p>Pq o acesso a ele é para entender o que me despertou em x situação. E a partir daí, me fortalecer, para quebrar padrões!<br>E antes, eu me julgava e, muitas vezes não queria acessar por vergonha, sabe?! Me libertou!</p>
-          </blockquote>
-        <button type="button" class="dep-more" aria-expanded="false">Ler depoimento completo</button>
-          <figcaption>
-            <span class="dep-avatar" aria-hidden="true">M</span>
-            <span class="dep-who"><strong>Maria Antonieta</strong><small>Participante do Pro<span class="cifrao">$</span>pera</small></span>
-          </figcaption>
-        </figure>
-        <figure class="dep-card reveal">
-          <span class="dep-mark" aria-hidden="true">&ldquo;</span>
-          <blockquote class="dep-text">
-          <p>Estou atrasada mas só um encontro: vendo as gravações e a cabeça assim 🤯🤯</p>
-          <p>Sério Anaaaaa!!! Está sendo um divisor de águas aqui</p>
-          </blockquote>
-          <figcaption>
-            <span class="dep-avatar" aria-hidden="true">D</span>
-            <span class="dep-who"><strong>Daniella de Souza</strong><small>Participante do Pro<span class="cifrao">$</span>pera</small></span>
-          </figcaption>
-        </figure>
-        <figure class="dep-card reveal is-long">
-          <span class="dep-mark" aria-hidden="true">&ldquo;</span>
-          <blockquote class="dep-text">
           <p>Meninas, hoje eu vim aqui falar um pouquinho sobre o trabalho da Ana Seixas</p>
           <p>Eu já venho há algum tempo nessa jornada de desenvolvimento pessoal, tentando me conhecer melhor, entender meus comportamentos e romper algumas barreiras.</p>
           <p>Mas o Prospera está sendo um verdadeiro romper na minha vida.</p>
@@ -1089,6 +1063,32 @@ section:has(+ .depoimentos){ padding-bottom:56px; }
           <figcaption>
             <span class="dep-avatar" aria-hidden="true">C</span>
             <span class="dep-who"><strong>Cristiane Mara</strong><small>Participante do Pro<span class="cifrao">$</span>pera</small></span>
+          </figcaption>
+        </figure>
+        <figure class="dep-card reveal">
+          <span class="dep-mark" aria-hidden="true">&ldquo;</span>
+          <blockquote class="dep-text">
+          <p>Estou atrasada mas só um encontro: vendo as gravações e a cabeça assim 🤯🤯</p>
+          <p>Sério Anaaaaa!!! Está sendo um divisor de águas aqui</p>
+          </blockquote>
+          <figcaption>
+            <span class="dep-avatar" aria-hidden="true">D</span>
+            <span class="dep-who"><strong>Daniella de Souza</strong><small>Participante do Pro<span class="cifrao">$</span>pera</small></span>
+          </figcaption>
+        </figure>
+        <figure class="dep-card reveal is-long">
+          <span class="dep-mark" aria-hidden="true">&ldquo;</span>
+          <blockquote class="dep-text">
+          <p>Nossaa.. foi muito bom!</p>
+          <p>Contextualização: eu tinha muita dúvida em como pensar no trauma.</p>
+          <p>Pq assim.. é muito desconfortável, e na minha versão eu sou a vítima (sempre 😅) e isso me incomodava um pouco.. me fazia pensar se eu estava certa em pensar assim. E inúmeros desvaneios sobre esse tema! Ahaha</p>
+          <p>E entender que o trauma explica, mas não justifica, foi maravilhoso.</p>
+          <p>Pq o acesso a ele é para entender o que me despertou em x situação. E a partir daí, me fortalecer, para quebrar padrões!<br>E antes, eu me julgava e, muitas vezes não queria acessar por vergonha, sabe?! Me libertou!</p>
+          </blockquote>
+        <button type="button" class="dep-more" aria-expanded="false">Ler depoimento completo</button>
+          <figcaption>
+            <span class="dep-avatar" aria-hidden="true">M</span>
+            <span class="dep-who"><strong>Maria Antonieta</strong><small>Participante do Pro<span class="cifrao">$</span>pera</small></span>
           </figcaption>
         </figure>
       </div>
